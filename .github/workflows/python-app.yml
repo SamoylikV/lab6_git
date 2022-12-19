@@ -38,7 +38,6 @@ jobs:
       run: |
         pip install unittest2
         python -m unittest tests.py
-    - name: Build EXE from Python Script
-      uses: Nuitka/Nuitka-Action@v0.4
-      with:
-        script-name: main.py
+    - name: build with pyinstaller
+      run: |
+        pyinstaller main.py
