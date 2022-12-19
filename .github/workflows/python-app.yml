@@ -36,8 +36,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pip install unittest
-        python3 -m unittest tests.py
+        pip install unittest2
+        python -m unittest tests.py
     - name: Build EXE from Python Script
       uses: Nuitka/Nuitka-Action@v0.4
       with:
